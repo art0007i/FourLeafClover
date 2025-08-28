@@ -1,0 +1,51 @@
+# This file is used by the Thunderstore CLI to build and publish your mod to Thunderstore. https://github.com/thunderstore-io/thunderstore-cli
+
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "art0007i"
+name = "FourLeafClover"
+description = "Makes you luckier"
+websiteUrl = "https://github.com/art0007i/FourLeafClover"
+containsNsfwContent = false
+
+# List any dependencies your mod has here, in the format "namespace-modname" = "version-constraint"
+[package.dependencies] 
+ResoniteModding-BepisLoader = "1.3.1"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./build"
+
+[[build.copy]]
+source = "./Plugin/bin/Release/🍀.dll"
+target = "plugins/🍀/"
+
+[[build.copy]]
+source = "./Plugin/bin/Release/🍀.pdb"
+target = "plugins/🍀/"
+
+[[build.copy]]
+source = "./Patcher/bin/Release/🍀Patcher.dll"
+target = "patchers/🍀/"
+
+[[build.copy]]
+source = "./Patcher/bin/Release/🍀Patcher.pdb"
+target = "patchers/🍀/"
+
+[[build.copy]]
+source = "./CHANGELOG.md"
+target = "/"
+
+[[build.copy]]
+source = "./LICENSE"
+target = "/"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["resonite"]
+
+[publish.categories]
+resonite = [ "memes" ]
