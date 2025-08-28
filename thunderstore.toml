@@ -6,6 +6,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "art0007i"
 name = "FourLeafClover"
+versionNumber = "3.0.1"
 description = "Makes you luckier"
 websiteUrl = "https://github.com/art0007i/FourLeafClover"
 containsNsfwContent = false
